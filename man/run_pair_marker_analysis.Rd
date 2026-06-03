@@ -61,3 +61,29 @@ output paths.
 \description{
 Run the complete pair marker analysis workflow
 }
+\examples{
+expr_file <- system.file(
+  "extdata",
+  "example_exp.txt",
+  package = "immunePairMarker"
+)
+clinical_file <- system.file(
+  "extdata",
+  "example_clinical.txt",
+  package = "immunePairMarker"
+)
+
+result <- run_pair_marker_analysis(
+  expr_file = expr_file,
+  clinical_file = clinical_file,
+  out_dir = tempdir(),
+  response_col = "response",
+  response_label = "response",
+  main_delta = 0.25,
+  delta_list = c(0, 0.25, 0.5),
+  dataset_name = "example"
+)
+
+result$sensitivity
+head(result$pairs)
+}
