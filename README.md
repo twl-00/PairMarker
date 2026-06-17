@@ -12,6 +12,8 @@ with response status.
 
 ![immunePair workflow overview](man/figures/immunePair-workflow.svg)
 
+Editable workflow PDF: [immunePair-workflow-editable.pdf](man/figures/immunePair-workflow-editable.pdf)
+
 ## Installation
 
 You can install the development version from GitHub:
